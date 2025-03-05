@@ -96,7 +96,7 @@ I chose to use CSS Modules for this project becuase it provides a good balance b
 - Easy to understand and debug
 - Great TypeScript support
 
-While there are many modern CSS solutions out there (like Tailwind, Styled Components, or Emotion), CSS Modules felt like the most straightforward choice for me to show case my ability to work with raw css and also part of the requirements for this project.
+While there are many modern CSS solutions out there (like Tailwind, Styled Components, or Emotion), CSS Modules felt like the most straightforward choice for me.
 
 ## API Integration
 
@@ -132,3 +132,7 @@ Created with ❤️ By: Mpilo Ntombela
 - GitHub: [@MpiloNtombela](https://github.com/MpiloNtombela)
 - LinkedIn: [@mpilo-ntombela](https://linkedin.com/in/mpilo-ntombela)
 - X: [@mpilohere](https://x.com/mpilohere)
+
+# App Preview
+![image](https://github.com/user-attachments/assets/85fe5449-268b-4ed9-b6c8-c9a34b44785e)
+
