@@ -133,6 +133,6 @@ Created with ❤️ By: Mpilo Ntombela
 - LinkedIn: [@mpilo-ntombela](https://linkedin.com/in/mpilo-ntombela)
 - X: [@mpilohere](https://x.com/mpilohere)
 
-# App Preview
+### App Preview
 ![image](https://github.com/user-attachments/assets/85fe5449-268b-4ed9-b6c8-c9a34b44785e)
 
