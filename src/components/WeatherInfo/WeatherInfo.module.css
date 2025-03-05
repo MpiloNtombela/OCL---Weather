@@ -1,0 +1,255 @@
+/* Please note that all the styling variables are defined in the index.css */
+
+.container {
+  position: relative;
+  padding: 1.5rem;
+  color: var(--text-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: var(--transition-all);
+  z-index: 1;
+}
+
+.closeButton:hover {
+  color: var(--error-color);
+  background-color: var(--bg-secondary);
+  transform: rotate(90deg);
+}
+
+.closeButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+}
+
+.location {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  word-wrap: break-word;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  line-height: 1.2;
+}
+
+.country {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.updateTime {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.mainInfo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.weatherIcon {
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.weatherIcon img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.temperature {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary-color);
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--text-secondary);
+}
+
+.tempRange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.tempHigh {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.tempDivider {
+  color: var(--border-color);
+}
+
+.tempLow {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  /* background-color: color-mix(in srgb, var(--bg-secondary) 98%, var(--text-color) 2%); */
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: color-mix(in srgb, var(--bg-color) 98%, var(--text-color) 2%);
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid color-mix(in srgb, var(--border-color) 80%, transparent);
+}
+
+.label {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.sunTimes {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: color-mix(in srgb, var(--bg-secondary) 98%, var(--text-color) 2%);
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.sunTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.sunTimeLabel {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sunTimeValue {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: var(--error-color);
+  font-size: 1rem;
+  background-color: color-mix(in srgb, var(--bg-color) 95%, #000 5%);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .location {
+    font-size: 1.25rem;
+  }
+
+  .temperature {
+    font-size: 3.5rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .details {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .sunTimes {
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,27 @@
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--text-secondary);
+  transition: var(--transition-all);
+  display: flex;
+  align-items: center;
+}
+
+.toggle:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+}

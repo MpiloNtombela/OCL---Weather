@@ -1,0 +1,144 @@
+.container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.forecastList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.forecastDay {
+  background-color: color-mix(in srgb, var(--bg-secondary) 98%, var(--text-color) 2%);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  transition: var(--transition-all);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.forecastDay:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background-color: color-mix(in srgb, var(--bg-secondary) 95%, var(--text-color) 5%);
+}
+
+.dayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--border-color) 80%, transparent);
+}
+
+.date {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 1.125rem;
+}
+
+.tempRange {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tempHigh {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.tempLow {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.dayContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.weatherIcon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.weatherDetails {
+  flex: 1;
+}
+
+.description {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .forecastDay {
+    padding: 1rem;
+  }
+
+  .dayHeader {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .date, .tempHigh, .tempLow {
+    font-size: 1rem;
+  }
+
+  .stats {
+    gap: 0.75rem;
+  }
+
+  .description {
+    margin-bottom: 0.75rem;
+  }
+}

@@ -1,0 +1,186 @@
+.searchBarContainer {
+  position: relative;
+  width: 100%;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 2.75rem 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition-all);
+  box-shadow: var(--shadow-lg);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.errorMessage {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  background-color: var(--error-color);
+  color: white;
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  text-align: center;
+  animation: slideDown 0.2s ease-out;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.locationButton {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: var(--transition-all);
+}
+
+.locationButton:hover {
+  color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.locationButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+.suggestions li {
+  list-style: none;
+}
+
+.suggestionButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-all);
+}
+
+.suggestionButton:hover {
+  background-color: var(--bg-secondary);
+}
+
+.state,
+.country {
+  color: var(--text-secondary);
+  font-size: 0.875em;
+  opacity: 0.8;
+}
+
+.state::before {
+  content: ", ";
+}
+
+.country::before {
+  content: ", ";
+}
+
+.suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 20px;
+}
+
+.loadingSpinner {
+  position: absolute;
+  right: 1.75rem;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .input {
+    padding: 0.625rem 2.5rem 0.625rem 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  .locationButton {
+    padding: 0.375rem;
+    right: 0.5rem;
+  }
+
+  .locationButton svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .suggestions {
+    font-size: 0.875rem;
+  }
+
+  .suggestionButton {
+    padding: 0.625rem 0.875rem;
+  }
+}
