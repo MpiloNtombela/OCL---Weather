@@ -22,7 +22,7 @@ A React application that displays weather data for different locations on an int
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/MpiloNtombela/OCL---Weather.git
 cd ocl-weather
 ```
 
